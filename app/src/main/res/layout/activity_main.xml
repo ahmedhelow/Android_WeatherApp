@@ -17,6 +17,7 @@
         app:layout_constraintEnd_toStartOf="@id/btn_getWeatherByCityID"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Weather by ID"
         android:textSize="12dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/btn_getWeatherByCityName"
         app:layout_constraintStart_toEndOf="@+id/btn_getCityID"
         app:layout_constraintTop_toTopOf="@id/btn_getCityID"
@@ -38,21 +40,19 @@
         android:layout_marginEnd="8dp"
         android:text="Weather by Name"
         android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_getWeatherByCityID"
-        app:layout_constraintTop_toTopOf="@id/btn_getWeatherByCityID" />
+        app:layout_constraintRight_toRightOf="@+id/et_dataInput"
+         />
 
     <EditText
         android:id="@+id/et_dataInput"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="City Name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_getCityID" />
+        app:layout_constraintRight_toLeftOf="@+id/btn_getWeatherByCityName"
+         />
 
     <ListView
         android:id="@+id/lv_weatherReports"
